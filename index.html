@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Interactive Map</title>
 
-  <!-- Link to your hosted JS files -->
-  <script type="text/javascript" src="https://robertpures3-dev.github.io/worldmap/mapdata.js"></script>
-  <script type="text/javascript" src="https://robertpures3-dev.github.io/worldmap/usmap.js"></script>
+  <!-- Make sure these URLs point to your real files -->
+  <script src="https://robertpures3-dev.github.io/worldmap/mapdata.js"></script>
+  <script src="https://robertpures3-dev.github.io/worldmap/worldmap.js"></script>
 
   <style>
     body {
@@ -28,5 +28,15 @@
 </head>
 <body>
   <div id="map"></div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      if (typeof simplemaps_worldmap !== "undefined") {
+        simplemaps_worldmap.load();
+      } else {
+        console.error("simplemaps_worldmap is not defined — check your script paths.");
+      }
+    });
+  </script>
 </body>
 </html>
