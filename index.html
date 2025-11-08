@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interactive Map</title>
+  <title>US Interactive Map</title>
 
-  <!-- Make sure these URLs point to your real files -->
+  <!-- Correct script paths -->
   <script src="https://robertpures3-dev.github.io/worldmap/mapdata.js"></script>
   <script src="https://robertpures3-dev.github.io/worldmap/usmap.js"></script>
 
@@ -31,10 +31,10 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", function() {
-      if (typeof simplemaps_worldmap !== "undefined") {
-        simplemaps_worldmap.load();
+      if (typeof simplemaps_usmap !== "undefined") {
+        simplemaps_usmap.load();
       } else {
-        console.error("simplemaps_worldmap is not defined — check your script paths.");
+        console.error("simplemaps_usmap is not defined — check your script paths.");
       }
     });
   </script>
